@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/national_fragment"
+            android:name="net.caze.roamingcontrol.MainActivity$NationalFragment" />
+
+        <!--<View style="@style/Divider"
+            android:id="@+id/forced_divider"/>-->
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/forcedroaming"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="openForced"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardElevation="0dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <TextView
+                    android:id="@+id/forced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/forced_icon"
+                    android:layout_toLeftOf="@+id/forced_icon"
+
+                    android:textStyle="italic"
+                    android:textColor="@color/defaultText"
+                    android:textSize="16sp"
+                    android:text="@string/manage_force_roaming"/>
+                <TextView
+                    android:id="@+id/forcedsum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/forced_icon"
+                    android:layout_toLeftOf="@+id/forced_icon"
+                    android:layout_below="@+id/forced"
+                    android:textStyle="italic"
+                    android:text="@string/manage_force_roaming" />
+                <ImageView
+                    android:id="@+id/forced_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="26dp"
+                    android:maxWidth="26dp"
+                    android:layout_alignBottom="@+id/forcedsum"
+                    android:contentDescription="@string/arrow"
+                    android:src="@drawable/ic_arrow_black_48dp"
+                    android:tint="@color/colorPrimary"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <!--<View style="@style/Divider"/>-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saved_fragment"
+            android:name="net.caze.roamingcontrol.MainActivity$SavedFragment" />
+
+        <!--<View style="@style/Divider"/>-->
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/manage_saved"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="openNetworks"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardElevation="0dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <TextView
+                    android:id="@+id/saved"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/saved_icon"
+                    android:layout_toLeftOf="@+id/saved_icon"
+                    android:textStyle="italic"
+                    android:textColor="@color/defaultText"
+                    android:textSize="16sp"
+                    android:text="@string/saved_networks" />
+                <TextView
+                    android:id="@+id/savedsum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/saved_icon"
+                    android:layout_toLeftOf="@+id/saved_icon"
+                    android:layout_below="@+id/saved"
+                    android:textStyle="italic"
+                    android:text="@string/manage_networks"/>
+                <ImageView
+                    android:id="@+id/saved_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="26dp"
+                    android:maxWidth="26dp"
+                    android:layout_alignBottom="@+id/savedsum"
+                    android:contentDescription="@string/arrow"
+                    android:src="@drawable/ic_arrow_black_48dp"
+                    android:tint="@color/colorPrimary"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <View style="@style/Divider"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/other_fragment"
+            android:name="net.caze.roamingcontrol.MainActivity$OtherFragment" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

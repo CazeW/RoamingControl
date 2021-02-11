@@ -1,0 +1,444 @@
+<resources>
+    <string name="app_name">Roaming Control</string>
+    <string name="version" translatable="false">v1.54beta</string>
+
+    <!--Main window-->
+    <string name="title_activity_main">Roaming Control</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="whitelist_mode">Whitelist mode</string>
+    <string name="whitelist_mode_summ">If this and Force roaming is enabled, the phone will be forced into roaming mode on all networks except those added in Saved roaming</string>
+    <string name="advanced_force">Advanced force roaming</string>
+    <string name="advanced_force_summ">More force roaming options</string>
+    <string name="match_name">Match network names</string>
+    <string name="match_name_summ">Match network name in addition to MNC\n(useful for networks that have several MNC)</string>
+    <string name="about_message">
+        <![CDATA[<b>Created by:</b> CazeW
+        <br><br>
+        <b>Huge thanks to:</b><br>
+        Sebastl@xda for beta testing!
+        <br><br>
+        <b>Special thanks to:</b><br>
+        rovo89<br>
+        Lion_1@xda<br>
+        oma@xda<br>
+        (for original National Roaming Xposed module)
+        <br><br>
+        <b>Translation</b>
+        <br>
+        toBsucht Psp@xda (German)]]>
+    </string>
+    <string name="donate">Like this app? Feel free to buy me a beer.</string>
+    <string name="paypal_donate">Paypal donate button</string>
+    <string name="help_message_main">
+        <![CDATA[<b>If the settings do not take effect immediately, you can toggle flight mode on and off to apply them.</b><br>
+        <br>
+        <br>
+        <u>National roaming</u><br>
+        <br>
+        <b>National roaming</b><br>
+        This option allows national roaming on virtual networks. Enabling this will also disable the "Force roaming" setting unless "Advanced force roaming" is enabled.<br>
+        <br>
+        <b>Force roaming</b><br>
+        This option forces the phone into roaming mode on national networks that are not your home network. Enabling this will also
+        disable the "National roaming" setting unless "Advanced force roaming" is enabled.<br>
+        Can also be used for Whitelist mode, see settings.<br>
+        <br>
+        <b>Advanced force roaming</b><br>
+        This option will allow you to manually specify the networks you want to force the phone into roaming mode on. In advanced
+        mode you can also have both National roaming and Force roaming enabled at the same time.<br>
+        <br>
+        <b>Manage force networks</b><br>
+        Opens a window where you can add and delete networks on which you want to force the phone into roaming mode on. Note, if
+        you have the same network added to both lists, the phone will go into roaming mode on that network and display the R. The same
+        applies to national roaming.<br>
+        <br>
+        <u>Saved roaming</u><br>
+        <br>
+        <b>Saved network roaming</b><br>
+        This option allows roaming in the networks/countries of your choosing.<br>
+        <br>
+        <b>Roaming type</b><br>
+        Select if you want to allow roaming based on networks or countries. Only the selected type is active, so roaming is
+        only allowed based on the selected type.<br>
+        <i><font color="red">Note: Country mode will allow roaming on all the networks in the added countries.</font></i><br>
+        <br>
+        <b>Manage Saved Networks/Countries</b><br>
+        Opens a window where you can add and delete networks/countries where you want roaming to be allowed.<br>
+        <br>
+        <u>Other</u><br>
+        <br>
+        <b>Hide application icon</b><br>
+        This option hides the application icon from the drawer and makes it accessible only through the Xposed app.]]></string>
+    <string name="national_roaming">National roaming</string>
+    <string name="national_roaming_summ">Allows national roaming</string>
+    <string name="saved_roaming">Saved roaming</string>
+    <string name="saved_roaming_network">Saved network roaming</string>
+    <string name="saved_roaming_country">Saved country roaming</string>
+    <string name="saved_roaming_network_summ">Allows roaming on saved networks</string>
+    <string name="saved_roaming_country_summ">Allows roaming in saved countries</string>
+    <string name="type_roaming">Roaming type</string>
+    <string name="country">Country</string>
+    <string name="network">Network</string>
+    <string name="whitelist">Whitelist</string>
+    <string name="countryMode">Country mode</string>
+    <string name="networkMode">Network mode (default)</string>
+    <string name="mode">mode</string>
+    <string name="manage_networks">Manage saved networks</string>
+    <string name="manage_countries">Manage saved countries</string>
+    <string name="manage_force_roaming">Manage force networks</string>
+    <string name="force_roaming_summ">Force phone into roaming mode on national networks</string>
+    <string name="hide_app">Hide application icon</string>
+    <string name="hide_app_summ">Hides the application icon from the drawer</string>
+
+
+    <!--Force window-->
+    <string name="force_roaming">Force roaming</string>
+    <string name="help_message_force">
+        <![CDATA[<b>Current network</b>
+        <br>
+        This displays the current network you are on.<br>
+        <br>
+        <u>Adding a network</u><br>
+        <br>
+        There are two ways you can add a network to your networks list. Press the \"Add current\" button to add
+        the current network you are on to the list. Alternatively you can add in networks manually by pressing the \"+\" button.<br>
+        <br>
+        <b>Add network window</b><br>
+        Here you can enter in the values for the network manually. You are encouraged to enter the correct name for the network
+        (as it is displayed on your phone), but this is not necessary.<br>
+        <br>
+        <u>Removing a network</u><br>
+        <br>
+        You can remove a network from the list by simply pressing on the network and a popup window will appear asking if you want
+        to remove that network. You can also long press on a network to select several to remove.<br>]]></string>
+
+    <!--Network window-->
+    <string name="help_message_network">
+        <![CDATA[<b>Current network</b>
+        <br>
+        This displays the current network you are on.<br>
+        <br>
+        <u>Adding a network</u><br>
+        <br>
+        There are two ways you can add a network to your networks list. Press the \"Add current\" button to add
+        the current network you are on to the list. Alternatively you can add in networks manually by pressing the \"+\" button.<br>
+        <br>
+        <b>Add network window</b><br>
+        Here you can enter in the values for the network manually. You are encouraged to enter the correct name for the network
+        (as it is displayed on your phone), but this is not necessary if you enter the correct MNC number for the network.<br>
+        <font color="red">If you do not know the MNC number, then the name has to be correct and the <b>\"Match network names\"</b> option has to be
+        enabled in the settings for the roaming to work.</font><br>
+        <br>
+        <u>Removing a network</u><br>
+        <br>
+        You can remove a network from the list by simply pressing on the network and a popup window will appear asking if you want
+        to remove that network. You can also long press on a network to select several to remove.<br>]]></string>
+    <string name="networks">networks</string>
+    <string name="current_network">Current network</string>
+    <string name="unknown_network">Unknown network, can not add this</string>
+    <string name="saved_networks">Saved networks</string>
+    <string name="add_network">Add network</string>
+    <string name="edit_network">Edit network</string>
+    <string name="action_sort">Sort</string>
+    <string name="current_network_name_country">%1$s%2$s</string>
+    <string name="manualName">Network name</string>
+    <string name="manualMCC">MCC number</string>
+    <string name="manualMNC">MNC number</string>
+    <string name="already_exists_country">is already in the list</string>
+    <string name="already_exists_namemcc">You already have a network with this name and MCC value</string>
+    <string name="already_exists_mccmnc">You already have a network with these MCC and MNC values</string>
+    <string name="name">Name</string>
+
+
+    <!--Country window-->
+    <string name="help_message_country">
+        <![CDATA[<b>Current country</b>
+        <br>
+        This displays the current country you are in.<br>
+        <br>
+        <u>Adding a country</u><br>
+        <br>
+        There are two ways you can add a country to your countries list. Press the \"Add current\" button to add
+        the current country you are in to the list. Alternatively you can add in countries manually by pressing the \"+\" button.<br>
+        <i><font color="red">Note: Adding a country will allow roaming on all the networks in that country.</font></i><br>
+        <br>
+        <b>Add country window</b><br>
+        From here you can manually select countries you would like to add to your list.<br>
+        <br>
+        <u>Removing a country</u><br>
+        <br>
+        You can remove a country from the list by simply pressing on the country and a popup window will appear asking if you want
+        to remove that country. You can also long press on a network to select several to remove.<br>]]></string>
+    <string name="current_country">Current country</string>
+    <string name="saved_countries">Saved countries</string>
+    <string name="add_country">Add country</string>
+    <string name="countries">countries</string>
+    <string name="remove_dialog_country">Are you sure you want to remove this country?"</string>
+
+
+    <!--General-->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="enabled">Enabled</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="add_current">Add current</string>
+    <string name="unknown">Unknown</string>
+    <string name="action_import">Import</string>
+    <string name="action_export">Export</string>
+    <string name="action_help">Help</string>
+    <string name="add">Add</string>
+    <string name="edit...">Edit…</string>
+    <string name="save">Save</string>
+    <string name="remove">Remove</string>
+    <string name="remove...">Remove…</string>
+    <string name="removed">removed</string>
+    <string name="notnow">Not now</string>
+    <string name="skip">Do not show this message again</string>
+    <string name="roaming_setting">System roaming setting is enabled</string>
+    <string name="roaming_setting_message">It is recommended to have the system roaming setting disabled to get the most out of this tool. Do you want to open the window to disable it?</string>
+    <string name="arrow">Arrow</string>
+    <string name="selected">selected</string>
+    <string name="sim1">SIM1</string>
+    <string name="sim2">SIM2</string>
+    <string name="dualsim_select">SIM selection</string>
+    <string name="not_mount_storage">"Could not mount the external storage"</string>
+    <string name="not_write">Could not write to external storage</string>
+    <string name="not_create_folder">Could not create folder</string>
+    <string name="not_valid_network_file">is not a valid Network list file</string>
+    <string name="not_valid_country_file">is not a valid Country list file</string>
+    <string name="replace_list">Replace current list</string>
+    <string name="replace_list_message">Do you want to replace the current list with</string>
+    <string name="filed_saved">File saved to </string>
+    <string name="need_accept_phone_state_permission">You need to accept the permission to be able to display current network information.</string>
+    <string name="added">added</string>
+    <string name="current_network_added">Current network added</string>
+    <string name="current_country_added">Current country added</string>
+    <string name="current_in_list">Current network is already in the list</string>
+
+    <!--Migrate settings-->
+    <string name="migration_success">Migrated old settings successfully</string>
+    <string name="something_wrong">Something went wrong, could not migrate old settings</string>
+
+
+    <!--Country list-->
+    <string name="abkhazia">Abkhazia</string>
+    <string name="afghanistan">Afghanistan</string>
+    <string name="albania">Albania</string>
+    <string name="algeria">Algeria</string>
+    <string name="american_samoa">American Samoa</string>
+    <string name="andorra">Andorra</string>
+    <string name="angola">Angola</string>
+    <string name="anguilla">Anguilla</string>
+    <string name="antigua_and_barbuda">Antigua &amp; Barbuda</string>
+    <string name="argentina">Argentina</string>
+    <string name="armenia">Armenia</string>
+    <string name="aruba">Aruba</string>
+    <string name="australia">Australia</string>
+    <string name="austria">Austria</string>
+    <string name="azerbaijan">Azerbaijan</string>
+    <string name="bahamas">Bahamas</string>
+    <string name="bahrain">Bahrain</string>
+    <string name="bangladesh">Bangladesh</string>
+    <string name="barbados">Barbados</string>
+    <string name="belarus">Belarus</string>
+    <string name="belgium">Belgium</string>
+    <string name="belize">Belize</string>
+    <string name="benin">Benin</string>
+    <string name="bermuda">Bermuda</string>
+    <string name="bhutan">Bhutan</string>
+    <string name="bolivia">Bolivia</string>
+    <string name="bosnia_and_herzegovina">Bosnia &amp; Herzegovina</string>
+    <string name="botswana">Botswana</string>
+    <string name="brazil">Brazil</string>
+    <string name="british_virgin_islands">British Virgin Islands</string>
+    <string name="brunei">Brunei</string>
+    <string name="bulgaria">Bulgaria</string>
+    <string name="burkina_faso">Burkina Faso</string>
+    <string name="burma">Burma</string>
+    <string name="burundi">Burundi</string>
+    <string name="cambodia">Cambodia</string>
+    <string name="cameroon">Cameroon</string>
+    <string name="canada">Canada</string>
+    <string name="cape_verde">Cape Verde</string>
+    <string name="cayman_islands">Cayman Islands</string>
+    <string name="central_african_republic">Central African Republic</string>
+    <string name="chad">Chad</string>
+    <string name="chile">Chile</string>
+    <string name="china">China</string>
+    <string name="colombia">Colombia</string>
+    <string name="comoros">Comoros</string>
+    <string name="congo_democratic_republic">Congo Democratic Republic</string>
+    <string name="congo">Congo</string>
+    <string name="cook_islands">Cook Islands</string>
+    <string name="costa_rica">Costa Rica</string>
+    <string name="croatia">Croatia</string>
+    <string name="cuba">Cuba</string>
+    <string name="curacao">Curacao</string>
+    <string name="cyprus">Cyprus</string>
+    <string name="czech_republic">Czech Republic</string>
+    <string name="denmark">Denmark</string>
+    <string name="djibouti">Djibouti</string>
+    <string name="dominica">Dominica</string>
+    <string name="dominican_republic">Dominican Republic</string>
+    <string name="ecuador">Ecuador</string>
+    <string name="egypt">Egypt</string>
+    <string name="el_salvador">El Salvador</string>
+    <string name="equatorial_guinea">Equatorial Guinea</string>
+    <string name="eritrea">Eritrea</string>
+    <string name="estonia">Estonia</string>
+    <string name="ethiopia">Ethiopia</string>
+    <string name="falkland_islands">Falkland Islands</string>
+    <string name="faroe_islands">Faroe Islands</string>
+    <string name="fiji">Fiji</string>
+    <string name="finland">Finland</string>
+    <string name="france">France</string>
+    <string name="french_antilles">French Antilles</string>
+    <string name="french_polynesia">French Polynesia</string>
+    <string name="gabon">Gabon</string>
+    <string name="gambia">Gambia</string>
+    <string name="georgia">Georgia</string>
+    <string name="germany">Germany</string>
+    <string name="ghana">Ghana</string>
+    <string name="gibraltar">Gibraltar</string>
+    <string name="greece">Greece</string>
+    <string name="greenland">Greenland</string>
+    <string name="grenada">Grenada</string>
+    <string name="guatemala">Guatemala</string>
+    <string name="guinea">Guinea</string>
+    <string name="guinea_bissau">Guinea-Bissau</string>
+    <string name="guyana">Guyana</string>
+    <string name="haiti">Haiti</string>
+    <string name="honduras">Honduras</string>
+    <string name="hong_kong">Hong Kong</string>
+    <string name="hungary">Hungary</string>
+    <string name="iceland">Iceland</string>
+    <string name="india">India</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="iran">Iran</string>
+    <string name="iraq">Iraq</string>
+    <string name="ireland">Ireland</string>
+    <string name="israel">Israel</string>
+    <string name="italy">Italy</string>
+    <string name="ivory_coast">Ivory Coast</string>
+    <string name="jamaica">Jamaica</string>
+    <string name="japan">Japan</string>
+    <string name="jordan">Jordan</string>
+    <string name="kazakhstan">Kazakhstan</string>
+    <string name="kenya">Kenya</string>
+    <string name="kiribati">Kiribati</string>
+    <string name="kuwait">Kuwait</string>
+    <string name="kyrgyzstan">Kyrgyzstan</string>
+    <string name="laos">Laos</string>
+    <string name="latvia">Latvia</string>
+    <string name="lebanon">Lebanon</string>
+    <string name="lesotho">Lesotho</string>
+    <string name="liberia">Liberia</string>
+    <string name="libya">Libya</string>
+    <string name="liechtenstein">Liechtenstein</string>
+    <string name="lithuania">Lithuania</string>
+    <string name="luxembourg">Luxembourg</string>
+    <string name="macau_china">Macau China</string>
+    <string name="macedonia">Macedonia</string>
+    <string name="madagascar">Madagascar</string>
+    <string name="malawi">Malawi</string>
+    <string name="malaysia">Malaysia</string>
+    <string name="maldives">Maldives</string>
+    <string name="mali">Mali</string>
+    <string name="malta">Malta</string>
+    <string name="mauritania">Mauritania</string>
+    <string name="mauritius">Mauritius</string>
+    <string name="mexico">Mexico</string>
+    <string name="micronesia">Micronesia</string>
+    <string name="moldova">Moldova</string>
+    <string name="monaco">Monaco</string>
+    <string name="mongolia">Mongolia</string>
+    <string name="montenegro">Montenegro</string>
+    <string name="montserrat">Montserrat</string>
+    <string name="morocco">Morocco</string>
+    <string name="mozambique">Mozambique</string>
+    <string name="namibia">Namibia</string>
+    <string name="nepal">Nepal</string>
+    <string name="netherlands">Netherlands</string>
+    <string name="new_caledonia">New Caledonia</string>
+    <string name="new_zealand">New Zealand</string>
+    <string name="nicaragua">Nicaragua</string>
+    <string name="niger">Niger</string>
+    <string name="nigeria">Nigeria</string>
+    <string name="niue">Niue</string>
+    <string name="north_korea">North Korea</string>
+    <string name="norway">Norway</string>
+    <string name="oman">Oman</string>
+    <string name="pakistan">Pakistan</string>
+    <string name="palau">Palau</string>
+    <string name="panama">Panama</string>
+    <string name="papua_new_guinea">Papua New Guinea</string>
+    <string name="paraguay">Paraguay</string>
+    <string name="peru">Peru</string>
+    <string name="philippines">Philippines</string>
+    <string name="poland">Poland</string>
+    <string name="portugal">Portugal</string>
+    <string name="puerto_rico">Puerto Rico</string>
+    <string name="qatar">Qatar</string>
+    <string name="reunion">Reunion</string>
+    <string name="romania">Romania</string>
+    <string name="russia">Russia</string>
+    <string name="rwanda">Rwanda</string>
+    <string name="saint_kitts_and_nevis">Saint Kitts &amp; Nevis</string>
+    <string name="saint_lucia">Saint Lucia</string>
+    <string name="samoa">Samoa</string>
+    <string name="san_marino">San Marino</string>
+    <string name="sao_tome_and_principe">Sao Tome &amp; Principe</string>
+    <string name="satellite_networks">Satellite Networks</string>
+    <string name="saudi_arabia">Saudi Arabia</string>
+    <string name="senegal">Senegal</string>
+    <string name="serbia">Serbia</string>
+    <string name="seychelles">Seychelles</string>
+    <string name="sierra_leone">Sierra Leone</string>
+    <string name="singapore">Singapore</string>
+    <string name="slovakia">Slovakia</string>
+    <string name="slovenia">Slovenia</string>
+    <string name="solomon_islands">Solomon Islands</string>
+    <string name="somalia">Somalia</string>
+    <string name="south_africa">South Africa</string>
+    <string name="south_korea">South Korea</string>
+    <string name="south_sudan">South Sudan</string>
+    <string name="spain">Spain</string>
+    <string name="sri_lanka">Sri Lanka</string>
+    <string name="st_pierre_and_miquelon">St. Pierre &amp; Miquelon</string>
+    <string name="st_vincent_and_grenadines">St. Vincent &amp; Grenadines</string>
+    <string name="sudan">Sudan</string>
+    <string name="suriname">Suriname</string>
+    <string name="swaziland">Swaziland</string>
+    <string name="sweden">Sweden</string>
+    <string name="switzerland">Switzerland</string>
+    <string name="syrian_arab_republic">Syrian Arab Republic</string>
+    <string name="taiwan">Taiwan</string>
+    <string name="tajikistan">Tajikistan</string>
+    <string name="tanzania">Tanzania</string>
+    <string name="thailand">Thailand</string>
+    <string name="timor_leste">Timor-Leste</string>
+    <string name="togo">Togo</string>
+    <string name="tonga">Tonga</string>
+    <string name="trinidad_and_tobago">Trinidad &amp; Tobago</string>
+    <string name="tunisia">Tunisia</string>
+    <string name="turkey">Turkey</string>
+    <string name="turkmenistan">Turkmenistan</string>
+    <string name="turks_and_caicos_islands">Turks &amp; Caicos Islands</string>
+    <string name="tuvalu">Tuvalu</string>
+    <string name="uganda">Uganda</string>
+    <string name="ukraine">Ukraine</string>
+    <string name="united_arab_emirates">United Arab Emirates</string>
+    <string name="united_kingdom">United Kingdom</string>
+    <string name="united_states">United States</string>
+    <string name="uruguay">Uruguay</string>
+    <string name="uzbekistan">Uzbekistan</string>
+    <string name="vanuatu">Vanuatu</string>
+    <string name="venezuela">Venezuela</string>
+    <string name="vietnam">Vietnam</string>
+    <string name="yemen">Yemen</string>
+    <string name="zambia">Zambia</string>
+    <string name="zimbabwe">Zimbabwe</string>
+</resources>

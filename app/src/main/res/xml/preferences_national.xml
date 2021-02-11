@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/national_roaming"
+        android:key="pref_roaming">
+        <SwitchPreference
+            android:key="user_national"
+            android:title="@string/national_roaming"
+            android:summary="@string/national_roaming_summ"
+            android:defaultValue="false" />
+        <SwitchPreference
+            android:key="user_forceroaming"
+            android:title="@string/force_roaming"
+            android:summary="@string/force_roaming_summ"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

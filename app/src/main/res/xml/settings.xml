@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Force roaming">
+        <CheckBoxPreference
+            android:key="user_whitelist_mode"
+            android:title="@string/whitelist_mode"
+            android:summary="@string/whitelist_mode_summ"
+            android:defaultValue="false"
+            android:dependency="user_advanced_force" />
+        <CheckBoxPreference
+            android:key="user_advanced_force"
+            android:title="@string/advanced_force"
+            android:summary="@string/advanced_force_summ"
+            android:defaultValue="false"
+            android:disableDependentsState="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/saved_roaming">
+        <CheckBoxPreference
+            android:key="user_match_name"
+            android:title="@string/match_name"
+            android:summary="@string/match_name_summ"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="net.caze.roamingcompanion.SavedRoamingNetwork">
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort_variant_white_24dp"
+        android:orderInCategory="1"
+        android:title="@string/action_sort"
+        app:showAsAction="ifRoom">
+    </item>
+
+    <item
+        android:id="@+id/action_import"
+        android:orderInCategory="97"
+        android:title="@string/action_import"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_export"
+        android:orderInCategory="98"
+        android:title="@string/action_export"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_help"
+        android:title="@string/action_help"
+        android:orderInCategory="99"
+        app:showAsAction="never" />
+</menu>

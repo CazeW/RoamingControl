@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/sim_group">
+        <item
+            android:id="@+id/sim1"
+            android:title="@string/sim1"/>
+        <item
+            android:id="@+id/sim2"
+            android:title="@string/sim2" />
+    </group>
+
+</menu>

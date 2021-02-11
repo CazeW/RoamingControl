@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Saved roaming"
+        android:key="pref_saved_roaming">
+        <SwitchPreference
+            android:key="user_saved"
+            android:title="@string/saved_roaming_network"
+            android:summary="@string/saved_roaming_network_summ"
+            android:defaultValue="false" />
+        <ListPreference
+            android:key="user_roaming_type"
+            android:title="@string/type_roaming"
+            android:dialogTitle="@string/type_roaming"
+            android:entries="@array/pref_roaming_type_entries"
+            android:entryValues="@array/pref_roaming_type_values"
+            android:defaultValue="Network"
+            android:dependency="user_saved" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796b</color>
+    <color name="colorAccent">#00897b</color>
+    <color name="colorFab">#ff4081</color>
+    <color name="colorSelected">#3cb2dfdb</color>
+    <color name="defaultText">#de000000</color>
+    <color name="summaryText">@android:color/tab_indicator_text</color>
+    <color name="backgroundLight">#fafafa</color>
+    <color name="backgroundDark">#303030</color>
+</resources>
