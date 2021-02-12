@@ -15,4 +15,4 @@ What this app allows you to do is:
 If you add your current network or country when being abroad, you are roaming and it is your own responsibility to keep your phonebill in check.**
 
 ## About
-I'm releasing this project of mine as open source as I no longer have a device that I can continue testing on. The app was originally made for Android Lollipop so I'm surprised that it has still worked up to Android 10 with no or minimal changes.
+I'm releasing this project of mine as open source as I no longer have a device that I can continue testing on. The app was originally made for Android JellyBean so I'm surprised that it has still worked up to Android 10 with no or minimal changes.
